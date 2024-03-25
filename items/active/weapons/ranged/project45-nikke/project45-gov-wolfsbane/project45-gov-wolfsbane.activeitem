@@ -85,7 +85,7 @@
       "boltPush" : ["/sfx/project45-nikke/project45-gov-wolfsbane/boltpush-wolfsbane.ogg"],
       "ejectMag": [ "/sfx/project45-nikke/project45-gov-wolfsbane/ejectmag-wolfsbane.ogg"],
       "reloadEnd": ["/sfx/project45-nikke/project45-gov-wolfsbane/loadmag-wolfsbane.ogg"],
-      "fire" : ["/sfx/project45-nikke/project45-gov-wolfsbane/fire2-wolfsbane.ogg"]
+      "fire" : ["/sfx/project45-nikke/project45-gov-wolfsbane/fire-wolfsbane.ogg"]
     }
   },
 
