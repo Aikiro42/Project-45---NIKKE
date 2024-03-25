@@ -26,24 +26,10 @@
 
   "project45GunModInfo": {
     "category": "ballistic",
-    "upgradeCapacity": 8,
-    "allowsConversion": [
-      "hitscan",
-      "summoned"
-    ],
-    "acceptsModSlot": [
-      "rail",
-      "sights",
-      "underbarrel",
-      
-      "material",
-      "magazine",
-      "receiver"
-    ],
-    "acceptsAmmoArchetype": [
-      "bullet",
-      "shotgun"
-    ]
+    "upgradeCapacity": 10,
+    "allowsConversion": [],
+    "acceptsModSlot": [],
+    "acceptsAmmoArchetype": []
   },
 
   "animationCustom": {
@@ -88,7 +74,6 @@
       "fire" : ["/sfx/project45-nikke/project45-gov-wolfsbane/fire-wolfsbane.ogg"]
     }
   },
-
   "baseOffset" : [0.5, 0.375],
   "muzzleOffset" : [2.625, 0.125],
   "ejectionPortOffset": [-0.75, 0.375],
@@ -119,7 +104,9 @@
     "cycleTime": 0.3,
     "ammoConsumeChance": 0.5,
     "audibleEjection": true,
-    
+    "closeBoltOnEmpty": true,
+    "postReloadDelay": 0.3,
+
     "cockTime": 0.6,
     "screenShakeAmount": 0.5,
     "manualFeed": false,
