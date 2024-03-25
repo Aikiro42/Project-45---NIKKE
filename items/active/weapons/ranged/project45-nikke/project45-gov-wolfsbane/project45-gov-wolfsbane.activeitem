@@ -12,14 +12,14 @@
   "itemTags" : ["weapon","ranged","sniperrifle"],
   "level" : 1,
   "muzzleFlashColor": [255, 255, 200],
-  "inventoryIcon" : "project45-gov-wolfsbane.png:idle.1",
-
+  "inventoryIcon" : "project45-gov-wolfsbane-icon.png",
+  "isUnique": true,
   "animationParts" : {
     "middle" : "project45-gov-wolfsbane.png",
     "middleFullbright" : "",
     "charge": "",
     "chargeFullbright": "",
-    "magazine": "",
+    "magazine": "project45-gov-wolfsbane-mag.png",
     "magazineFullbright": "",
     "muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
   },
@@ -65,7 +65,7 @@
       },
       "magazine": {
         "particles": [
-          {"particle": "project45antimaterielmag"}
+          {"particle": "project45wolfsbanemag"}
         ]
       },
       "muzzleFlash" : {
@@ -125,13 +125,13 @@
     "manualFeed": false,
     "heavyWeapon": false,
     "recoilUpOnly": true,
-    "recoilMomentum": 40,
+    "recoilMomentum": 20,
 
-    "recoilAmount": 3,
-    "recoilMaxDeg": 15,
+    "recoilAmount": 1,
+    "recoilMaxDeg": 10,
     
     "recoverDelay": 0.125,
-    "recoverTime": 1,
+    "recoverTime": 0.5,
 
     "projectileKind": "hitscan",
     "hitscanParameters": {
