@@ -1,10 +1,10 @@
 {
-  "itemName" : "project45-gov-wolfsbane",
+  "itemName" : "project45-gov-sevendwarves",
   "price" : 10000,
   "maxStack" : 1,
   "rarity" : "Essential",
-  "description" : "Red Hood's custom M82A2. Has spaghetti stuck in the magwell.",
-  "shortdescription" : "Wolfsbane",
+  "description" : "Snow White's anti-ship rifle. One of the subsystems of her weapons platform.",
+  "shortdescription" : "Seven Dwarves: I",
   "tooltipKind" : "project45gun",
   "gunArchetype": "antiMateriel",
   "category" : "uniqueWeapon",
@@ -12,14 +12,14 @@
   "itemTags" : ["weapon","ranged","sniperrifle"],
   "level" : 1,
   "muzzleFlashColor": [255, 255, 200],
-  "inventoryIcon" : "project45-gov-wolfsbane-icon.png",
+  "inventoryIcon" : "project45-gov-sevendwarves-icon.png",
   "isUnique": true,
   "animationParts" : {
-    "middle" : "project45-gov-wolfsbane.png",
+    "middle" : "project45-gov-sevendwarves.png",
     "middleFullbright" : "",
     "charge": "",
     "chargeFullbright": "",
-    "magazine": "project45-gov-wolfsbane-mag.png",
+    "magazine": "project45-gov-sevendwarves-mag.png",
     "magazineFullbright": "",
     "muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
   },
@@ -40,12 +40,33 @@
             "image": ""
           }
         }
+      },
+      "stateTypes": {
+        "gun": {
+          "states": {
+            "firing": {
+              "frames": 4
+            },
+            "ejecting": {
+              "frames": 2
+            },
+            "boltPulling": {
+              "frames": 2
+            },
+            "feeding": {
+              "frames": 2
+            },
+            "boltPushing": {
+              "frames": 2
+            }
+          }
+        }
       }
     },
     "particleEmitters": {
       "ejectionPort": {
         "particles": [
-          {"particle": "project45bulletcase"},
+          {"particle": "project45sabotshellsmall"},
           {"particle": "rocketbarrelpuff"}
         ]
       },
@@ -74,7 +95,7 @@
       "fire" : ["/sfx/project45-nikke/project45-gov-wolfsbane/fire-wolfsbane.ogg"]
     }
   },
-  "baseOffset" : [0.5, 0.375],
+  "baseOffset" : [1.5, 0.375],
   "muzzleOffset" : [2.625, 0.125],
   "ejectionPortOffset": [-0.75, 0.375],
   "magazineOffset": [-1, -0.25],
@@ -93,29 +114,39 @@
     
   "primaryAbilityType": "project45gunfire",
   "primaryAbility": {
-    "baseDamageMultiplier": 0.64,
+    "baseDamageMultiplier": 0.2,
     "critChance": 0.5,
     "reloadCost": 75,
-    "critDamageMult": 2.6,
-    "maxAmmo": 7,
-    "bulletsPerReload": 7,
+    "critDamageMult": 2.0,
+    "maxAmmo": 4,
+    "bulletsPerReload": 4,
     "inaccuracy": 10,
-    "semi": false,
-    "cycleTime": 0.3,
-    "ammoConsumeChance": 0.5,
+    
+    "semi": true,
+    "cycleTime": 1,
+    "fireTime": 0.5,
+    "ammoConsumeChance": 1,
     "audibleEjection": true,
     "closeBoltOnEmpty": true,
     "postReloadDelay": 0.3,
+    "ejectBeforeAnimation": false,
 
-    "cockTime": 0.6,
+    "cockTime": 0.75,
     "screenShakeAmount": 0.5,
-    "manualFeed": false,
-    "heavyWeapon": false,
+    "manualFeed": true,
+    "heavyWeapon": true,
     "recoilUpOnly": true,
-    "recoilMomentum": 20,
+    "recoilMomentum": 60,
 
-    "recoilAmount": 1,
-    "recoilMaxDeg": 10,
+    "chargeDamageMult": 5,
+    "overchargeTime": 3,
+    "dischargeDelayTime": 3,
+    "perfectChargeDamageMult": 10,
+    "perfectChargeRange": [1, 1],
+    "resetChargeOnFire": true,
+
+    "recoilAmount": 10,
+    "recoilMaxDeg": 20,
     
     "recoverDelay": 0.125,
     "recoverTime": 0.5,
@@ -123,101 +154,64 @@
     "projectileKind": "hitscan",
     "hitscanParameters": {
       "punchThrough": 99,
-      "hitscanWidth": 8,
+      "hitscanWidth": 16,
       "hitscanBrightness": 0.3,
-      "hitscanColor": [255, 75, 0]
+      "hitscanColor": [255, 200, 0]
     },
 
     "muzzleProjectiles": [
       {
         "type": "project45_muzzleshockwave",
         "parameters": {
-          "speed": -5
-        },
-        "firePerShot": true
-      },
-      {
-        "type": "project45-gov-wolfsbanewolves",
-        "parameters": {
-          "waveAmplitude" : 0.25
-        },
-        "firePerShot": true
-      },
-      {
-        "type": "project45-gov-wolfsbanewolves",
-        "parameters": {
-          "waveAmplitude" : -0.25
+          "speed": -10
         },
         "firePerShot": true
       }
     ],
   
-    "stances": {
-
-      // stance while the gun has no mag
-
-      "aimStance": {
-        "backArmFrame": "swim.3"
-      },
-
-      "jammed": {
+    "stances":{
+      "reloading": {
         "armRotation" : -15,
-        "weaponRotation" : 15,
-        "frontArmFrame": "swim.2",
-        "backArmFrame": "swim.3"
+        "weaponRotation" : 30,
+        "frontArmFrame": "run.3",
+        "backArmFrame": "idle.1",
+        "weaponOffset": [-1, 0],
+        "twoHanded": true
       },
-
-      "unjam": {
-        "armRotation" : -15,
-        "weaponRotation" : 10,
-        "frontArmFrame": "swim.1",
-        "backArmFrame": "swim.3"
+      "loadRound": {
+        "armRotation": -1,
+        "weaponRotation": -1,
+        "frontArmFrame": "rotation"
       },
-
-      "empty": {
-        "armRecoil": 15,
-        "weaponRecoil": 5,
-        "backArmFrame": "swim.3"
-      },
-
-      "reloading" : {
-        "twoHanded" : true,
-        "allowRotate" : false,
-        "aimAngle": 0,
-        "allowFlip" : true,
-        // "frontArmFrame": "run.2",
-        // "backArmFrame": "idle.2"
-
-        "armRotation" : -15,
-        "weaponRotation" : 0,
-        "frontArmFrame": "idle.1",
-        "backArmFrame": "swim.3"
-
-      },
-      "reloaded" : {
-        "armRotation" : -15,
-        "weaponRotation" : 0,
-        "twoHanded" : true,
-        "allowRotate" : false,
-        "aimAngle": 0,
-        "allowFlip" : true,
-        "frontArmFrame": "run.2"
-      },
-      
       "boltPull": {
-        "armRotation" : -15,
-        "weaponRotation" : 10,
-        "frontArmFrame": "swim.1",
-        "backArmFrame": "swim.3"
+        "frontArmFrame": "rotation",
+        "backArmFrame": "run.2"
       },
       "boltPush": {
-        "snap": true,
+        "armRotation" : 5,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+        "allowRotate" : false,
+        "allowFlip" : true,
+        "backArmFrame" : "swim.3"
+      },
+      "reloaded": {
         "armRotation" : -15,
-        "weaponRotation" : 15,
-        "frontArmFrame": "swim.2",
-        "backArmFrame": "swim.3"
+        "weaponRotation" : 30,
+        "frontArmFrame": "run.3",
+        "backArmFrame": "rotation",
+        "weaponOffset": [-1, 0]
+      },
+      "empty" : {
+        "armRotation" : -15,
+        "weaponRotation" : 30,
+        "twoHanded" : true,
+        "allowRotate" : false,
+        "aimAngle": 0,
+        "allowFlip" : true,
+        "frontArmFrame": "run.3",
+        "weaponOffset": [-1, 0]
       }
-
     }
   },
 
