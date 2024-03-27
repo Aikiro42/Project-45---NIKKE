@@ -92,7 +92,8 @@
       "boltPush" : ["/sfx/project45-nikke/project45-gov-wolfsbane/boltpush-wolfsbane.ogg"],
       "ejectMag": [ "/sfx/project45-nikke/project45-gov-wolfsbane/ejectmag-wolfsbane.ogg"],
       "reloadEnd": ["/sfx/project45-nikke/project45-gov-wolfsbane/loadmag-wolfsbane.ogg"],
-      "fire" : ["/sfx/project45-nikke/project45-gov-wolfsbane/fire-wolfsbane.ogg"]
+      "fire" : ["/sfx/project45-nikke/project45-gov-wolfsbane/fire-wolfsbane.ogg"],
+      "chargeDrone": ["/sfx/interface/sniper_mark_pitch1.ogg"]
     }
   },
   "baseOffset" : [1.5, 0.375],
@@ -116,7 +117,7 @@
   "primaryAbility": {
     "baseDamageMultiplier": 0.2,
     "critChance": 0.5,
-    "reloadCost": 75,
+    "reloadCost": 100,
     "critDamageMult": 2.0,
     "maxAmmo": 4,
     "bulletsPerReload": 4,
