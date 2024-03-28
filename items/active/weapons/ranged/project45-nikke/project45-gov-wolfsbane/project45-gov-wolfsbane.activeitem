@@ -125,7 +125,13 @@
       "punchThrough": 99,
       "hitscanWidth": 8,
       "hitscanBrightness": 0.3,
-      "hitscanColor": [255, 75, 0]
+      "hitscanColor": [255, 75, 0],
+      "hitscanActionOnHit": [
+        {
+          "action" : "config",
+          "file" : "/projectiles/project45-nikke/explosions/nikke-wolfsbaneexplosion/nikke-wolfsbaneexplosion.config"
+        }    
+      ]
     },
 
     "muzzleProjectiles": [
