@@ -1,0 +1,10 @@
+[
+    {
+        "op": "add",
+        "path": "/project45-nikke",
+        "value": [
+            "/spawnitem project45-gov-wolfsbane 1 '{\"seed\": 69420}'",
+            "/spawnitem project45-gov-sevendwarves 1 '{\"seed\": 69420}'"
+        ]
+    }
+]
