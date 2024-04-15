@@ -130,7 +130,7 @@
     "audibleEjection": true,
     "closeBoltOnEmpty": true,
     "postReloadDelay": 0.3,
-    "ejectBeforeAnimation": false,
+    "ejectAfterAnimation": true,
 
     "cockTime": 0.75,
     "screenShakeAmount": 0.5,
